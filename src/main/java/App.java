@@ -26,6 +26,7 @@ public class App {
     private static final String LABEL_DETECTION_MICROSERVICE_URL = "http://localhost:8081";
     private static final String DEFAULT_MAX_LABELS = "10";
     private static final String DEFAULT_MIN_CONFIDENCE = "0.5";
+    private static final String LINK_DURAION_IN_MINUTES = "5";
 
     private static void printHelp(Options options) {
         HelpFormatter formatter = new HelpFormatter();
@@ -91,7 +92,7 @@ public class App {
 
             // GET object
 
-            HttpGet get = new HttpGet(DATA_OBJECT_MICROSERVICE_URL + "/objects/" + fileName);
+            HttpGet get = new HttpGet(DATA_OBJECT_MICROSERVICE_URL + "/objects/" + fileName + "?duration=" + LINK_DURAION_IN_MINUTES);
             response = client.execute(get);
 
             if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
