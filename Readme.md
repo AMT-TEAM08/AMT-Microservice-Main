@@ -1,3 +1,8 @@
+# Microservice Main
+This is the main application for the AMT Lab, it uses two microservices :
+* [DataObject](https://github.com/Nelson-Jnrnd/AMT-Microservice-DataObject)
+* [Label Detector](https://github.com/Nelson-Jnrnd/AMT-Microservice-LabelDetector)
+
 ## Introduction
 This application is used to detect entities in a picture using two microservices. The first microservice is responsible for storing the image, while the second microservice performs label detection on the image.
 
