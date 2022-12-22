@@ -26,7 +26,7 @@ public class App {
     private static final String LABEL_DETECTION_MICROSERVICE_URL = "http://localhost:8081";
     private static final String DEFAULT_MAX_LABELS = "10";
     private static final String DEFAULT_MIN_CONFIDENCE = "0.5";
-    private static final String LINK_DURAION_IN_MINUTES = "5";
+    private static final String LINK_DURAION_IN_MINUTES = "20";
 
     private static void printHelp(Options options) {
         HelpFormatter formatter = new HelpFormatter();
