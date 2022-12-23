@@ -5,7 +5,7 @@ This is the main application for the AMT Lab, it uses two microservices :
 
 ## Additionnal information
 
-More general information on the project are available on this [wiki](https://github.com/Nelson-Jnrnd/AMT-Microservice-Main/wiki)
+More general information on the project are available on this [wiki](https://github.com/AMT-TEAM08/AMT-Microservice-Main/wiki)
 
 ## Introduction
 This application is used to detect entities in a picture using two microservices. The first microservice is responsible for storing the image, while the second microservice performs label detection on the image.
