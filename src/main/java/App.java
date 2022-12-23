@@ -46,7 +46,10 @@ public class App {
     }
 
     public static void main(String[] args) {
+        System.out.println(processCommand(args));
+    }
 
+    public static String processCommand(String[] args) {
         Options options = new Options();
         options.addOption("h", "help", false, "Print usage");
         options.addRequiredOption("p", "path", true, "Path to the file to upload");
@@ -59,7 +62,7 @@ public class App {
 
             if (cmd.hasOption("h")) {
                 printHelp(options);
-                return;
+                return "";
             }
 
             String path = cmd.getOptionValue("p");
@@ -123,16 +126,15 @@ public class App {
 
             InputStream labels = response.getEntity().getContent();
 
-            String labelsString = readInputStream(labels);
-
-            System.out.println("Labels: " + labelsString);
+            return readInputStream(labels);
         } catch (ParseException e) {
             System.err.println(e.getMessage());
             printHelp(options);
             System.exit(1);
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.err.println(e.getMessage());
             System.exit(1);
         }
+        return "";
     }
 }
